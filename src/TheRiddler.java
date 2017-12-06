@@ -9,18 +9,28 @@ public class TheRiddler {
 
 	public static void main(String[] args) {
 
-		// 1. Make a variable to hold the score
 int score = 0;
-		// 3. Ask the user a riddle. Here are some ideas: bit.ly/some-riddles
-String answer = JOptionPane.showInputDialog("Who can travel the world while staying in a corner?").toLowerCase();
-		// 4. If they got the answer right, pop up "correct!" and increase the score by one
-if answer.equals("a stamp") || answer.equals("a stamp!")
-		// 5. Otherwise, say "wrong" and tell them the answer
+// riddle 1
+String answer1 = JOptionPane.showInputDialog("Who can travel the world while staying in a corner?").toLowerCase();
+if (answer1.equals("a stamp") || answer1.equals("a stamp!") || answer1.equals("a stamp.") || answer1.equals("stamp") || answer1.equals("stamp!") || answer1.equals("stamp.")){
+score = score + 1;
+JOptionPane.showMessageDialog(null, "Correct! The score is " + score + "!");
+}else
+{JOptionPane.showMessageDialog(null, "Wrong! It's a stamp! The score is " + score + "!");}
+int keep2 = JOptionPane.showConfirmDialog(null, "Do you want to keep playing?");
+// riddle 2
+if (keep2 == 0){
+	String answer2 = JOptionPane.showInputDialog("What has a head. a tail, but no body?").toLowerCase();
+	if (answer2.equals("a coin") || answer2.equals("a coin!") || answer2.equals("a coin.") || answer2.equals("coin") || answer2.equals("coin!") || answer2.equals("coin.")){
+score = score + 1;
+JOptionPane.showMessageDialog(null, "Correct! The score is " + score + "!");}else {
+JOptionPane.showMessageDialog(null, "Wrong! It's a coin! The score is " + score + "!");
+		}
+	}
 
-		// 6. Add some more riddles
 
-		// 2. Make a pop up to show the score.
-JOptionPane.showMessageDialog(null, "The score is " + score + "!");
+
+
 	}
 }
 
